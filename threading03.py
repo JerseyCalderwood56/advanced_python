@@ -7,10 +7,7 @@ tLock = threading.Lock()
 def timer(name, delay, repeat):
     print("Timer: " + name + " Started")
 
-
-
     while repeat > 0:
-
         tLock.acquire()
         print(name + " Has Acquired the lock")
 
@@ -20,7 +17,6 @@ def timer(name, delay, repeat):
         tLock.release()
 
         print(name + " is releasing the lock")
-
 
     print("Timer: " + name + " Completed")
 
